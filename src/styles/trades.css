@@ -1,0 +1,47 @@
+/* ━━━ Trades Template Design System ━━━ */
+
+:root {
+  --colour-accent: #1E4D8C;
+  --colour-accent-light: rgba(30, 77, 140, 0.15);
+  --colour-dark: #111827;
+  --colour-mid: #374151;
+  --colour-subtle: #F9FAFB;
+  --colour-white: #FFFFFF;
+  --colour-border: #E5E7EB;
+}
+
+/* Base resets for this template */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--colour-dark);
+  background: var(--colour-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Heading font */
+.font-heading {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Eyebrow label style */
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--colour-accent);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
