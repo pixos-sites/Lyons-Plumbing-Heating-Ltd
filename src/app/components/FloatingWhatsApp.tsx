@@ -17,16 +17,21 @@ export function FloatingWhatsApp() {
       href={`https://wa.me/${whatsapp}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-0 left-0 right-0 z-[55] flex md:hidden items-center justify-center gap-2"
+      className="fixed left-1/2 z-[55] flex -translate-x-1/2 md:hidden items-center justify-center gap-2"
       style={{
-        height: 56,
-        backgroundColor: "#25D366",
+        height: 50,
+        width: "calc(100% - 28px)",
+        maxWidth: 320,
+        borderRadius: 999,
+        border: "1px solid rgba(255,255,255,0.14)",
+        backgroundColor: "#1BAE57",
         color: "#fff",
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: 600,
         textDecoration: "none",
         fontFamily: "'Inter', sans-serif",
-        bottom: "calc(env(safe-area-inset-bottom, 0px) * -1)",
+        bottom: "calc(env(safe-area-inset-bottom, 0px) + 10px)",
+        boxShadow: "0 10px 28px rgba(0,0,0,0.24)",
         transform: "translateZ(0)",
       }}
     >

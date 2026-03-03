@@ -50,8 +50,6 @@ export default function App() {
       <MapEmbed />
       <Footer />
       <FloatingWhatsApp />
-      {/* Bottom padding for mobile floating WhatsApp bar */}
-      <div className="h-14 md:hidden" />
     </div>
   );
 }
