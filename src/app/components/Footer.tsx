@@ -43,7 +43,7 @@ export function Footer() {
         </div>
 
         {/* Centre */}
-        <span style={{ fontSize: 13, color: "var(--colour-mid)" }}>
+        <span style={{ fontSize: 13, color: "#fff" }}>
           {siteConfig.trade} · {siteConfig.location}
         </span>
 
@@ -57,7 +57,7 @@ export function Footer() {
               {phone}
             </a>
           ) : null}
-          <span style={{ fontSize: 12, color: "var(--colour-mid)" }}>
+          <span style={{ fontSize: 12, color: "#fff" }}>
             © 2025 {siteConfig.business_name}
           </span>
         </div>
