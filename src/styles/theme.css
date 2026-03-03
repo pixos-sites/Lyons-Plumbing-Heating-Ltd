@@ -178,4 +178,11 @@
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
+
+  /* Keep contact form controls at >=16px on mobile to prevent iOS auto-zoom. */
+  #contact input,
+  #contact textarea,
+  #contact select {
+    font-size: 1rem !important;
+  }
 }

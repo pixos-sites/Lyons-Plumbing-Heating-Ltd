@@ -20,12 +20,14 @@ export function FloatingWhatsApp() {
       className="fixed bottom-0 left-0 right-0 z-[55] flex md:hidden items-center justify-center gap-2"
       style={{
         height: 56,
-        backgroundColor: "rgba(37,211,102,0.97)",
+        backgroundColor: "#25D366",
         color: "#fff",
         fontSize: 16,
         fontWeight: 600,
         textDecoration: "none",
         fontFamily: "'Inter', sans-serif",
+        bottom: "calc(env(safe-area-inset-bottom, 0px) * -1)",
+        transform: "translateZ(0)",
       }}
     >
       <WhatsAppIcon size={20} />

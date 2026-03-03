@@ -25,7 +25,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-full" style={{ height: "90vh", minHeight: 560 }}>
+    <section className="relative w-full" style={{ height: "100svh", minHeight: 700 }}>
       {useHeroImage ? (
         <>
           <div
@@ -57,7 +57,12 @@ export function Hero() {
       {/* Content */}
       <div
         className="relative h-full flex flex-col justify-center"
-        style={{ paddingLeft: "6%", paddingRight: "6%" }}
+        style={{
+          paddingLeft: "6%",
+          paddingRight: "6%",
+          paddingTop: "calc(72px + env(safe-area-inset-top, 0px))",
+          paddingBottom: 24,
+        }}
       >
         <div style={{ maxWidth: 640 }}>
           {/* Eyebrow — cascade item 0 */}
@@ -79,7 +84,7 @@ export function Hero() {
             style={{
               ...getStyle(1),
               fontWeight: 700,
-              fontSize: "clamp(56px, 6vw, 76px)",
+              fontSize: "clamp(40px, 11vw, 76px)",
               lineHeight: 1.05,
               letterSpacing: "-0.02em",
               color: "#fff",
@@ -166,7 +171,7 @@ export function Hero() {
 
       {/* Bottom Anchor Bar — cascade item 4 */}
       <div
-        className="absolute bottom-0 left-0 right-0 flex flex-wrap items-center justify-center gap-3 md:gap-6 overflow-hidden"
+        className="absolute bottom-0 left-0 right-0 hidden md:flex flex-wrap items-center justify-center gap-3 md:gap-6 overflow-hidden"
         style={{
           ...getStyle(4),
           minHeight: 56,

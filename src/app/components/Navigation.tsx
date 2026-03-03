@@ -5,6 +5,7 @@ import { siteConfig } from "../config";
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const safeAreaTop = "env(safe-area-inset-top, 0px)";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -36,19 +37,20 @@ export function Navigation() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
-          height: "64px",
+          height: `calc(64px + ${safeAreaTop})`,
+          paddingTop: safeAreaTop,
           backgroundColor: scrolled ? "var(--colour-white)" : "transparent",
           boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.08)" : "none",
         }}
       >
         <div
-          className="flex items-center justify-between h-full"
-          style={{ padding: "0 6%" }}
+          className="flex items-center justify-between"
+          style={{ padding: "0 6%", minHeight: 64 }}
         >
           {/* Wordmark */}
           <div className="flex items-center gap-2">
             {logoPath ? (
-              <img src={logoPath} alt={`${siteConfig.business_name} logo`} className="h-10 w-auto object-contain" />
+              <img src={logoPath} alt={`${siteConfig.business_name} logo`} className="h-8 md:h-10 w-auto object-contain" />
             ) : (
               <>
                 <span
@@ -145,11 +147,14 @@ export function Navigation() {
         >
           <div
             className="flex items-center justify-between"
-            style={{ height: 56, padding: "0 24px" }}
+            style={{
+              height: `calc(56px + ${safeAreaTop})`,
+              padding: `${safeAreaTop} 24px 0`,
+            }}
           >
             <div className="flex items-center gap-2">
               {logoPath ? (
-                <img src={logoPath} alt={`${siteConfig.business_name} logo`} className="h-10 w-auto object-contain" />
+                <img src={logoPath} alt={`${siteConfig.business_name} logo`} className="h-8 md:h-10 w-auto object-contain" />
               ) : (
                 <>
                   <span
